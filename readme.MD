@@ -1,5 +1,5 @@
 ### Подготовка работы
-0. Выполнить gh repo clone KirillMur/512test
+0. Выполнить  git clone https://github.com/KirillMur/512test
 1. Переключиться на ветку master
 2. Запустить docker-compose build
 3. Запустить docker-compose up -d
