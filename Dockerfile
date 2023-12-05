@@ -4,6 +4,9 @@ RUN apt-get update && apt-get install -y \
     curl \
     wget
 
+RUN docker-php-ext-install \
+    pdo_mysql
+
 ## Copy config files
 ADD ./docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 

@@ -10,3 +10,18 @@ services:
     ports:
       - "80:80"
     restart: always
+
+  mysql:
+    image: mysql:8.2.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'docker_db'
+      MYSQL_USER: 'docker'
+      MYSQL_PASSWORD: '123'
+      MYSQL_ROOT_PASSWORD: 'admin'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - ../mysql:/var/lib/mysql
